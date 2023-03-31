@@ -29,10 +29,13 @@ public class InsuranceQuoteGeneratorTestsTest
     {
         driver.Quit();
     }
+
+    string baseURL = "http://localhost/prog2070a03/";
+
     [Test]
-    public void getAQuoteTest1Age25Experience3Accidents02500()
+    public void getAQuote_Test1_Age25Experience3Accidents0_2500()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -62,9 +65,9 @@ public class InsuranceQuoteGeneratorTestsTest
         }
     }
     [Test]
-    public void getAQuoteTest2Age25Experience3Accidents4NoInsurance()
+    public void getAQuote_Test2_Age25Experience3Accidents4_NoInsurance()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -94,9 +97,9 @@ public class InsuranceQuoteGeneratorTestsTest
         }
     }
     [Test]
-    public void getAQuoteTest3Age35Experience10Accidents21350()
+    public void getAQuote_Test3_Age35Experience10Accidents2_1350()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -126,9 +129,9 @@ public class InsuranceQuoteGeneratorTestsTest
         }
     }
     [Test]
-    public void getAQuoteTest4Age27Experience3Accidents0InvalidPhone()
+    public void getAQuote_Test4_Age27Experience3Accidents0_InvalidPhone()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -155,9 +158,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("phone-error")).Text, Is.EqualTo("Phone Number must follow the patterns 111-111-1111 or (111)111-1111"));
     }
     [Test]
-    public void getAQuoteTest5Age28Experience3Accidents0InvalidEmail()
+    public void getAQuote_Test5_Age28Experience3Accidents0_InvalidEmail()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -184,9 +187,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("email-error")).Text, Is.EqualTo("Must be a valid email address"));
     }
     [Test]
-    public void getAQuoteTest6Age35Experience17Accidents0InvalidPostalCode()
+    public void getAQuote_Test6_Age35Experience17Accidents0_InvalidPostalCode()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -213,9 +216,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("postalCode-error")).Text, Is.EqualTo("Postal Code must follow the pattern A1A 1A1"));
     }
     [Test]
-    public void getAQuoteTest7AgeEmptyExperience5Accidents0OmittedAge()
+    public void getAQuote_Test7_AgeEmptyExperience5Accidents0_OmittedAge()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -240,9 +243,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("age-error")).Text, Is.EqualTo("Age (>=16) is required"));
     }
     [Test]
-    public void getAQuoteTest8Age37Experience8AccidentsEmptyOmittedAccidents()
+    public void getAQuote_Test8_Age37Experience8AccidentsEmpty_OmittedAccidents()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -267,9 +270,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("accidents-error")).Text, Is.EqualTo("Number of accidents is required"));
     }
     [Test]
-    public void getAQuoteTest9Age45ExperienceEmptyAccidents0OmittedExperience()
+    public void getAQuote_Test9_Age45ExperienceEmptyAccidents0_OmittedExperience()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -294,9 +297,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("experience-error")).Text, Is.EqualTo("Years of experience is required"));
     }
     [Test]
-    public void getAQuoteTest10Age35Experience3Accidents21875()
+    public void getAQuote_Test10_Age35Experience3Accidents2_1875()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -326,9 +329,9 @@ public class InsuranceQuoteGeneratorTestsTest
         }
     }
     [Test]
-    public void getAQuoteTest11Age30Experience0Accidents04000()
+    public void getAQuote_Test11_Age30Experience0Accidents0_4000()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -358,9 +361,9 @@ public class InsuranceQuoteGeneratorTestsTest
         }
     }
     [Test]
-    public void getAQuoteTest12Age35Experience17Accidents0InvalidFirstName()
+    public void getAQuote_Test12_Age35Experience17Accidents0_InvalidFirstName()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("lastName")).Click();
@@ -385,9 +388,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("firstName-error")).Text, Is.EqualTo("First Name is required"));
     }
     [Test]
-    public void getAQuoteTest13Age35Experience17Accidents0InvalidLastName()
+    public void getAQuote_Test13_Age35Experience17Accidents0_InvalidLastName()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -412,9 +415,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("lastName-error")).Text, Is.EqualTo("Last Name is required"));
     }
     [Test]
-    public void getAQuoteTest14Age35Experience17Accidents0InvalidAddress()
+    public void getAQuote_Test14_Age35Experience17Accidents0_InvalidAddress()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
@@ -439,9 +442,9 @@ public class InsuranceQuoteGeneratorTestsTest
         Assert.That(driver.FindElement(By.Id("address-error")).Text, Is.EqualTo("Address is required"));
     }
     [Test]
-    public void getAQuoteTest15Age35Experience17Accidents0InvalidCity()
+    public void getAQuote_Test15_Age35Experience17Accidents0_InvalidCity()
     {
-        driver.Navigate().GoToUrl("http://localhost/prog2070a03/prog2070a03/");
+        driver.Navigate().GoToUrl(baseURL);
         driver.Manage().Window.Size = new System.Drawing.Size(784, 816);
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
